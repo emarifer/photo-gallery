@@ -1,0 +1,13 @@
+<%- layout('layouts/main') %>
+<h1 class="text-light text-center">My Images</h1>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <% photos.forEach(element => { %>
+        <img src="<%= element.imageURL %>" alt="" class="swiper-slide">
+        <% }) %>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>

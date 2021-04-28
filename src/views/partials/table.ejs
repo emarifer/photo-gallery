@@ -1,0 +1,25 @@
+<table class="table text-light">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% photos.forEach(element => { %>
+            <tr>
+                <td><%= element.title %></td>
+                <td><%= element.description %></td>
+                <td>
+                    <a href="<%= element.imageURL%>" target="_blank" rel="noopener noreferrer" class="btn-sm btn-primary">
+                        <span class="material-icons align-middle">visibility</span>
+                    </a>
+                    <a href="<%= prefix %>/images/delete/<%= element._id%>" class="btn-sm btn-danger ml-2">
+                        <span class="material-icons align-middle">delete</span>
+                    </a>                            
+                </td>
+            </tr>                 
+        <% }) %>
+    </tbody>
+</table>

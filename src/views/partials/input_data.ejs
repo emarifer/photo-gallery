@@ -1,0 +1,24 @@
+<div class="card rounded-lg">
+    <div class="card-body">
+        <form action="<%= prefix %>/images/add" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" name="title" class="form-control" placeholder="Image Title…" autofocus>
+            </div>
+            <div class="form-group">
+                <textarea name="description" class="form-control" placeholder="Image Description…"></textarea>
+            </div>
+            <div class="input-group mb-2">
+                <div class="custom-file">
+                    <input type="file" name="image" class="custom-file-input" id="inputGroupFile01">
+                    <label for="inputGroupFile01" class="custom-file-label p-0">
+                        <img src="../img/choose-file.png" width="50" alt="Choose File">
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-block btn-primary" type="submit">
+                <span class="material-icons align-middle mr-2">file_upload</span>
+                Upload Image
+            </button>
+        </form>
+    </div>
+</div>
